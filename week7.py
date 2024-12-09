@@ -3,23 +3,6 @@ from sklearn.datasets import load_iris
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-try:
-    # Load the dataset (replace with actual file path if using a CSV file)
-    iris_df = pd.read_csv('path/to/your/dataset.csv')
-except FileNotFoundError:
-    print("File not found. Please check the file path.")
-except pd.errors.EmptyDataError:
-    print("No data found. Please check the file content.")
-except Exception as e:
-    print(f"An error occurred: {e}")
-
-# Handling missing values
-if iris_df.isnull().values.any():
-    # Fill missing values with the mean of the column
-    iris_df.fillna(iris_df.mean(), inplace=True)
-    print("Missing values were filled with the mean of the respective columns.")
-
-
 # Load the Iris dataset
 iris = load_iris()
 iris_df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
