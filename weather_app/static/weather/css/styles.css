@@ -1,0 +1,192 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Theme Color */
+:root {
+    --theme-color: #001f3f; /* Navy Blue */
+    --theme-color-light: #003366;
+    --theme-color-dark: #001a33;
+    --text-color: #ffffff;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--theme-color);
+    margin: 20px 0;
+}
+
+/* Links */
+a {
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--theme-color-light);
+    text-decoration: underline;
+}
+
+/* Buttons */
+button {
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--theme-color-light);
+}
+
+button:active {
+    background-color: var(--theme-color-dark);
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--theme-color-light);
+    border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+    border-color: var(--theme-color);
+    outline: none;
+}
+
+/* Form Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--theme-color);
+}
+
+/* Containers */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: var(--text-color);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: var(--theme-color-light);
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Cards */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--theme-color);
+    color: var(--text-color);
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
